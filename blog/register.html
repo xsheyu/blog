@@ -1,0 +1,98 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+       $(function () {
+           var reg=/^[0-9a-zA-Z]{5,19}/;
+           $("#username").blur(function () {
+             if ($("#username").val().length<6) {
+                   $("#tiShi").text("用户名不能少于6位");
+                   return -1;
+               }else if (!reg.test(this.value)){
+                   $("#tiShi").text("用户名只能由数字和字符组成");
+               }else{
+                 $("#tiShi").text("");
+             }
+           });
+           $("#password").blur(function () {
+               var reg=/^([a-zA-Z0-9]|[._]){4,19}$/;
+               if($("#password").val().length<6){
+                   $("#pwd").text("密码不能少于6位");
+               }else if(!reg.test(this.value)){
+                   $("#pwd").text("密码只能由数字、字母、点.和下划线_组成");
+               }else{
+                   $("#pwd").text("");
+               }
+           });
+       });
+    </script>
+    <style type="text/css" >
+        div,form,label,input{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color: #32c4df;
+        }
+        .reg{
+            width:550px;
+            margin:100px auto;
+
+        }
+        .form-item{
+            padding:10px 1px;
+        }
+        .text{
+            font-size:20px;
+            float: left;
+            width: 100px;
+            text-align: right;
+        }
+        input{
+            width:200px;
+            height:30px;
+            line-height:30px;
+            border:none;
+            background-color:#DDDDDD;
+            padding-left:3px;
+        }
+        #tiShi,#pwd,#rePwd{
+            font-size:12px;
+            color: #ff0000;
+
+        }
+        .submitBtn{
+            width:200px;
+            height:30px;
+            background-color: #2398ff;
+            border-radius: 10px;
+            border:none;
+            margin-left: 80px;
+            margin-top:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reg">
+        <form  method="post">
+            <div class="form-item">
+                <label class="text">用户名：</label>
+                <input type="text" name="username" placeholder="请输入用户名" id="username">
+                <label id="tiShi"></label>
+            </div>
+            <div class="form-item">
+                <label class="text">密码：</label>
+                <input type="password" placeholder="请输入密码" id="password">
+                <label id="pwd"></label>
+            </div>
+            <div class="form-item">
+                <label class="text">确认密码：</label>
+                <input type="password" placeholder="请再次输入密码" id="rePassword">
+                <label id="rePwd"></label>
+            </div>
+            <input type="submit" value="立即注册" class="submitBtn">
+        </form>
+    </div>
+</body>
+</html>
