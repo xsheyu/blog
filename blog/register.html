@@ -25,6 +25,14 @@
                    $("#pwd").text("");
                }
            });
+           $("#rePassword").blur(function () {
+               if (this.value!=$("#password").val()){
+                   $("#rePwd").text("两次输入的密码不一致");
+                   return -1;
+               }else{
+                   $("#rePwd").text("");
+               }
+           });
        });
     </script>
     <style type="text/css" >
@@ -75,7 +83,7 @@
 </head>
 <body>
     <div class="reg">
-        <form  method="post">
+        <form action="main.html" method="post">
             <div class="form-item">
                 <label class="text">用户名：</label>
                 <input type="text" name="username" placeholder="请输入用户名" id="username">
