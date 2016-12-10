@@ -48,6 +48,29 @@
                    $("#rePwd").text("");
                }
            });
+           $(".submitBtn").click(function(){
+              $.ajax({
+                url:"http://192.168.0.199/blog/userMain/registUser/",
+                data:{
+                  username:$("#username").val(),
+                  password:$("#password").val()
+                },
+                type:"post",
+                dataType:"json",
+                success:function(return_data){
+                  var code=return_data.code;
+                  if(code==1){
+                    window.location.href="main.html";
+                  }else{
+                    alert(return_data.message);
+                  }
+                },
+                error: function(){
+                  alert("啊，网络走丢了")
+                }
+              });
+
+           });
        });
     </script>
     <style type="text/css" >
@@ -98,7 +121,7 @@
 </head>
 <body>
     <div class="reg">
-        <form action="main.html" method="post">
+        <form action="" method="post">
             <div class="form-item">
                 <label class="text">用户名：</label>
                 <input type="text" name="username" placeholder="请输入用户名" id="username">
@@ -114,7 +137,7 @@
                 <input type="password" placeholder="请再次输入密码" id="rePassword">
                 <label id="rePwd"></label>
             </div>
-            <input type="submit" value="立即注册" class="submitBtn">
+            <input type="button" value="立即注册" class="submitBtn">
         </form>
     </div>
 </body>
