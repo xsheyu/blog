@@ -12,7 +12,22 @@
                }else if (!reg.test(this.value)){
                    $("#tiShi").text("用户名只能由数字和字符组成");
                }else{
-                 $("#tiShi").text("");
+                 $.ajax({
+                  url:"http://192.168.0.199/blog/userMain/isLoginNameRepetition/",
+                  data:{
+                    username:$("#username").val()
+                  },
+                  type:"get",
+                  dataType:"json",
+                  success:function(return_data){
+                    var code = return_data.code;
+                    if(code!=1){
+                      $("#tiShi").text("用户名已存在");
+                    }else{
+                      $("#tiShi").text("");
+                    }
+                  }
+                 });
              }
            });
            $("#password").blur(function () {
