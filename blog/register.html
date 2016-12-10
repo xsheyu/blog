@@ -4,7 +4,7 @@
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
     <script type="text/javascript">
        $(function () {
-           var reg=/^[0-9a-zA-Z]{5,19}/;
+           var reg=/^[0-9a-zA-Z]{5,19}$/;
            $("#username").blur(function () {
              if ($("#username").val().length<6) {
                    $("#tiShi").text("用户名不能少于6位");
