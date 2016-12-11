@@ -1,7 +1,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
+    <script src="./js/common.js"></script>
     <script type="text/javascript">
        $(function () {
            var reg=/^[0-9a-zA-Z]{5,19}$/;
@@ -13,7 +14,8 @@
                    $("#tiShi").text("用户名只能由数字和字符组成");
                }else{
                  $.ajax({
-                  url:"http://192.168.0.199/blog/userMain/isLoginNameRepetition/",
+//                  url:"http://192.168.0.199/blog/userMain/isLoginNameRepetition/",
+                  url: $.URL.user.isLoginNameRepetition,
                   data:{
                     username:$("#username").val()
                   },
@@ -50,7 +52,8 @@
            });
            $(".submitBtn").click(function(){
               $.ajax({
-                url:"http://192.168.0.199/blog/userMain/registUser/",
+//                url:"http://192.168.0.199/blog/userMain/registUser/",
+                url: $.URL.user.regist,
                 data:{
                   username:$("#username").val(),
                   password:$("#password").val()
