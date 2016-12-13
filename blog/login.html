@@ -2,7 +2,21 @@
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript">
-        
+        $(function(){
+            $.ajax({
+                url:$.user.login,
+                data:{
+                   username:$("#username") .val()
+                },
+                type:get,
+                dataType:json,
+                success:function(return_data){
+                    var code=return_data.code;
+
+                },
+
+            });
+        });
     </script>
     <style type="text/css">
         *{
@@ -54,7 +68,8 @@
     <h2>登录</h2>
     <div class="item">
         <label>用户名：</label>
-        <input type="text" name="username" placeholder="请输入用户名">
+        <input type="text" name="username" placeholder="请输入用户名" id="username">
+        <span id="user"></span>
     </div>
     <div class="item">
         <label>密码：</label>
