@@ -1,7 +1,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
+    <script src="./js/common.js"></script>
     <script type="text/javascript">
        $(function () {
            var reg=/^[0-9a-zA-Z]{5,19}$/;
@@ -12,7 +13,23 @@
                }else if (!reg.test(this.value)){
                    $("#tiShi").text("用户名只能由数字和字符组成");
                }else{
-                 $("#tiShi").text("");
+                 $.ajax({
+//                  url:"http://192.168.0.199/blog/userMain/isLoginNameRepetition/",
+                  url: $.URL.user.isLoginNameRepetition,
+                  data:{
+                    username:$("#username").val()
+                  },
+                  type:"get",
+                  dataType:"json",
+                  success:function(return_data){
+                    var code = return_data.code;
+                    if(code!=1){
+                      $("#tiShi").text("用户名已存在");
+                    }else{
+                      $("#tiShi").text("");
+                    }
+                  }
+                 });
              }
            });
            $("#password").blur(function () {
@@ -32,6 +49,30 @@
                }else{
                    $("#rePwd").text("");
                }
+           });
+           $(".submitBtn").click(function(){
+              $.ajax({
+//                url:"http://192.168.0.199/blog/userMain/registUser/",
+                url: $.URL.user.regist,
+                data:{
+                  username:$("#username").val(),
+                  password:$("#password").val()
+                },
+                type:"post",
+                dataType:"json",
+                success:function(return_data){
+                  var code=return_data.code;
+                  if(code==1){
+                    window.location.href="main.html";
+                  }else{
+                    alert(return_data.message);
+                  }
+                },
+                error: function(){
+                  alert("啊，网络走丢了")
+                }
+              });
+
            });
        });
     </script>
@@ -84,7 +125,7 @@
 </head>
 <body>
     <div class="reg">
-        <form action="main.html" method="post">
+        <form action="" method="post">
             <div class="form-item">
                 <label class="text">用户名：</label>
                 <input type="text" name="username" placeholder="请输入用户名" id="username">
@@ -100,7 +141,7 @@
                 <input type="password" placeholder="请再次输入密码" id="rePassword">
                 <label id="rePwd"></label>
             </div>
-            <input type="submit" value="立即注册" class="submitBtn">
+            <input type="button" value="立即注册" class="submitBtn">
         </form>
     </div>
 </body>
