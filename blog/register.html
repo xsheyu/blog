@@ -50,29 +50,35 @@
                    $("#rePwd").text("");
                }
            });
-           $(".submitBtn").click(function(){
-              $.ajax({
-//                url:"http://192.168.0.199/blog/userMain/registUser/",
-                url: $.URL.user.regist,
-                data:{
-                  username:$("#username").val(),
-                  password:$("#password").val()
-                },
-                type:"post",
-                dataType:"json",
-                success:function(return_data){
-                  var code=return_data.code;
-                  if(code==1){
-                    window.location.href="main.html";
-                  }else{
-                    alert(return_data.message);
-                  }
-                },
-                error: function(){
-                  alert("啊，网络走丢了")
-                }
-              });
+           $(".submitBtn").click(function () {
+           if($("#username").val() &&$("#password").val() && $("#rePassword").val()) {
 
+                   $.ajax({
+//                url:"http://192.168.0.199/blog/userMain/registUser/",
+                       url: $.URL.user.regist,
+                       data: {
+                           username: $("#username").val(),
+                           password: $("#password").val()
+                       },
+                       type: "post",
+                       dataType: "json",
+                       success: function (return_data) {
+                           var code = return_data.code;
+                           if (code == 1) {
+                               window.location.href = "main.html";
+                           } else {
+                               alert(return_data.message);
+                           }
+                       },
+                       error: function () {
+                           alert("啊，网络走丢了")
+                       }
+                   });
+
+
+           }else{
+               alert("nonono")
+           }
            });
        });
     </script>
@@ -127,7 +133,7 @@
         <form action="" method="post">
             <div class="form-item">
                 <label class="text">用户名：</label>
-                <input type="text" name="username" placeholder="请输入用户名" id="username">
+                <input type="text" name="username" placeholder="请输入用户名" id="username" >
                 <label id="tiShi"></label>
             </div>
             <div class="form-item">
