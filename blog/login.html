@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript">
-        $(function(){
+        $(".loginBtn").click()(function(){
             $.ajax({
                 url:$.URL.user.login,
                 data:{
@@ -23,6 +23,7 @@
                     alert("啊，网络不见了");
                 }
             });
+
         });
     </script>
     <style type="text/css">
@@ -68,6 +69,14 @@
             font-size:20px;
             margin-left:100px;
         }
+        a{
+            text-decoration: none;
+            display: block;
+            color: #000;
+            padding-left: 180px;
+            margin-top: 15px;
+            font-size: 10px;
+        }
     </style>
 </head>
 <body bgcolor="#32c4df">
@@ -82,7 +91,8 @@
         <label>密码：</label>
         <input type="password" name="pwd" placeholder="请输入密码">
     </div>
-    <button>登录</button>
+    <button class="loginBtn">登录</button>
+    <a href="register.html">木有账号，去注册</a>
 </div>
 </body>
 </html>
