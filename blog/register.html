@@ -28,7 +28,10 @@
                     }else{
                       $("#tiShi").text("");
                     }
-                  }
+                  },
+                     error:function(){
+                         $("#tiShi").text("");
+                     }
                  });
              }
            });
@@ -52,7 +55,6 @@
            });
            $(".submitBtn").click(function () {
            if($("#username").val() &&$("#password").val() && $("#rePassword").val()) {
-
                    $.ajax({
 //                url:"http://192.168.0.199/blog/userMain/registUser/",
                        url: $.URL.user.regist,
@@ -74,10 +76,8 @@
                            alert("啊，网络走丢了")
                        }
                    });
-
-
            }else{
-               alert("nonono")
+               alert("用户名和密码都要写对哦")
            }
            });
        });

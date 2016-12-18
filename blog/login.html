@@ -4,17 +4,24 @@
     <script type="text/javascript">
         $(function(){
             $.ajax({
-                url:$.user.login,
+                url:$.URL.user.login,
                 data:{
-                   username:$("#username") .val()
+                    username:$("#qwe") .val(),
+                    password:$("#password").val(),
                 },
-                type:get,
-                dataType:json,
+                type:"post",
+                dataType:"json",
                 success:function(return_data){
                     var code=return_data.code;
-
+                    if(code!=1){
+                        alert("message");
+                    }else{
+                        window.location.href="main.html";
+                    }
                 },
-
+                error:function () {
+                    alert("啊，网络不见了");
+                }
             });
         });
     </script>
@@ -68,7 +75,7 @@
     <h2>登录</h2>
     <div class="item">
         <label>用户名：</label>
-        <input type="text" name="username" placeholder="请输入用户名" id="username">
+        <input type="text" name="username" placeholder="请输入用户名" id="qwe">
         <span id="user"></span>
     </div>
     <div class="item">
