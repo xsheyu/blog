@@ -2,29 +2,32 @@
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript">
-        $(".loginBtn").click()(function(){
-            $.ajax({
-                url:$.URL.user.login,
-                data:{
-                    username:$("#qwe") .val(),
-                    password:$("#password").val(),
-                },
-                type:"post",
-                dataType:"json",
-                success:function(return_data){
-                    var code=return_data.code;
-                    if(code!=1){
-                        alert("message");
-                    }else{
-                        window.location.href="main.html";
+        $(function () {
+            $(".loginBtn").click(function(){
+                $.ajax({
+                    url:$.URL.user.login,
+                    data:{
+                        username:$("#qwe") .val(),
+                        password:$("#password").val(),
+                    },
+                    type:"post",
+                    dataType:"json",
+                    success:function(return_data){
+                        var code=return_data.code;
+                        if(code!=1){
+                            alert("message");
+                        }else{
+                            window.location.href="main.html";
+                        }
+                    },
+                    error:function () {
+                        alert("啊，网络不见了");
                     }
-                },
-                error:function () {
-                    alert("啊，网络不见了");
-                }
-            });
+                });
 
-        });
+            });
+        })
+
     </script>
     <style type="text/css">
         *{
