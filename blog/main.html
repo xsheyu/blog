@@ -6,227 +6,27 @@
             margin:0;
             padding:0;
         }
-        body{
-            font-size:12px;
-            /*background: #196316;*/
-        }
-        header{
-            position: relative;
-            height:60px;
-        }
-        /*.logo{*/
-            /*background: url("images/logo.jpg") no-repeat;*/
-            /*width:300px;*/
-            /*height:60px;*/
-            /*position: absolute;*/
-            /*float: left;*/
-            /*top:0;*/
-            /*left: 200px;;*/
-
-        /*}*/
-        .navClass{
-            line-height:60px;
-            margin-left:800px;
-        }
-        .navClass a{
-            padding: 20px;;
-        }
-        .navClass a span{
-            font-size:18px;
-        }
-        .banner{
-            background:url("images/banner.jpg") top center;
-            height:265px;
-        }
-        .banner section{
-            padding:50px 20px 15px 60px;
-            color: #ebffe5;
-        }
-        .banner section p{
-            font-size:14px;
-            line-height:14px;
-            margin:8px 5px;
-        }
-        .main {
-            font-size: 18px; margin: 5px; line-height: 35px;background: #e7ffdd;height:35px;
-            text-align: center;
-            border-bottom:2px solid #ffa81c;
-
-        }
-        .main .blogList{
-            float: left;
-            height: 450px;
-            /*position: relative;*/
-            /*margin-top:8px;*/
-            /*margin-left:210px;*/
-        }
-        .main .blogList figure {
-            width:200px;
-            height:150px;
-            margin:25px 30px 5px 200px;
-            float: left;
-        }
-        /*.main .left .content{*/
-            /*width:450px;*/
-            /*height:150px;*/
-            /*margin-left: 250px;*/
-            /*padding:3px;*/
-            /*color: #666;*/
-        /*}*/
-        .main ul p{
-            overflow: hidden;
-            font-size:12px;
-
-        }
-        .main .aside{
-            width:400px;
+        nav{
             float:right;
-        }
-        .blog{
-            width:1000px;
-            margin:30px auto;
-            overflow: hidden;
-        }
-        .blog figure{
-            background: #ece8df;
-            border:10px solid #ebffe5;
-            width:300px;
-            height:430px;
-            margin:0 5px;
-            float: left;
-        }
-       figure p{
-           font-size:14px;
-           text-shadow: 1px 1px 0 #fff;
-           line-height:26px;
-           text-align:center;
-           font-weight:bold;
-        }
-        figure p a{
-            color:#226309;
-        }
-        figure figcaption{
-            padding:10px;
-            line-height:22px;
-            color: #666;
+            margin-right:200px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
+    <div>
+        <header>
+            <div id="logo"></div>
+            <nav>
+                <span><a href="login.html">登录</a></span>
+                <span><a href="register.html">注册</a></span>
+                <span>搜索</span>
+            </nav>
+        </header>
+        <div>
+            <div class="aside"></div>
+            <div class="content"></div>
         </div>
-        <nav class="navClass">
-            <a>
-                <span>首页</span>
-            </a>
-            <a>
-                <span>关于我们</span>
-            </a>
-            <a>
-            <span>碎言碎语</span>
-            </a>
-            <a>
-                <span>慢生活</span>
-            </a>
-            <a>
-                <span>技术分享</span>
-            </a>
-            <a>
-            <span>留言板</span>
-            </a>
-        </nav>
-    </header>
-    <div class="banner">
-        <section>
-            <p>我们不停的翻弄着回忆</p>
-            <p>却再也找不回那时的自己</p>
-            <p>红尘一梦，不再追寻</p>
-        </section>
     </div>
-    <div class="main">
-        <h2 >文章推荐</h2>
-        <div class="blogList">
-            <figure>
-                <img src="images/icon.jpg">
-            </figure>
-            <ul>
-                    <h5>你要相信没有到不了的明天</h5>
-                    <p>不管你现在是一个人走在异乡的街道上始终没有找到一丝归属感，还是你在跟朋友们一起吃饭开心地笑着的时候闪过一丝落寞。请你相信没有到不了的明天......</p>
-                <p class="date">
-                    <span >慢生活</span>
-                    <span>2016/12/9</span>
-                </p>
-            </ul>
-            <figure>
-                <img src="images/icon.jpg">
-            </figure>
-            <ul>
-                <h5>你要相信没有到不了的明天</h5>
-                <p>不管你现在是一个人走在异乡的街道上始终没有找到一丝归属感，还是你在跟朋友们一起吃饭开心地笑着的时候闪过一丝落寞。请你相信没有到不了的明天......</p>
-                <p class="date">
-                    <span >慢生活</span>
-                    <span>2016/12/9</span>
-                </p>
-            </ul>
 
-
-            <!--<div class="icon">-->
-                <!--<img src="images/icon.jpg">-->
-            <!--</div>-->
-            <!--<div class="content">-->
-                <!--<h3>你要相信没有到不了的明天</h3>-->
-                <!--<p>不管你现在是一个人走在异乡的街道上始终没有找到一丝归属感，还是你在跟朋友们一起吃饭开心地笑着的时候闪过一丝落寞。请你相信没有到不了的明天......</p>-->
-                <!--<span style="font-size: 10px;">慢生活&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2016/12/9</span>-->
-            <!--</div>-->
-        </div>
-        <div class="aside">
-            <dl style="text-align: left;">
-                <dt>文章排行</dt>
-                <dd><a>1 你要相信没有到不了的明天</a></dd>
-                <dd><a>2 愿有人陪你颠沛流离</a></dd>
-                <dd><a>3 摸摸头</a></dd>
-                <dt>博客排行</dt>
-                <dd><a>1 你要相信没有到不了的明天</a></dd>
-                <dd><a>2 愿有人陪你颠沛流离</a></dd>
-                <dd><a>3 摸摸头</a></dd>
-            </dl>
-        </div>
-    </div>
-    <div class="blog">
-        <figure>
-            <a>
-                <img src="images/t01.jpg">
-            </a>
-            <p>
-                <a>愿有人陪你颠沛流离</a>
-            </p>
-            <figcaption>
-                有一天晚上我收到朋友的邮件，他问我怎样可以最快地摆脱寂寞，我想了想不知道应该怎么回答他，因为我从来没有摆脱过这个问题，我只能去习惯它，就像习惯身体的一部分。
-            </figcaption>
-        </figure>
-        <figure>
-            <a>
-                <img src="images/t02.jpg">
-            </a>
-            <p>
-                <a>愿有人陪你颠沛流离</a>
-            </p>
-            <figcaption>
-                有一天晚上我收到朋友的邮件，他问我怎样可以最快地摆脱寂寞，我想了想不知道应该怎么回答他，因为我从来没有摆脱过这个问题，我只能去习惯它，就像习惯身体的一部分。
-            </figcaption>
-        </figure>
-        <figure>
-            <a>
-                <img src="images/t03.jpg">
-            </a>
-            <p>
-                <a>愿有人陪你颠沛流离</a>
-            </p>
-            <figcaption>
-                有一天晚上我收到朋友的邮件，他问我怎样可以最快地摆脱寂寞，我想了想不知道应该怎么回答他，因为我从来没有摆脱过这个问题，我只能去习惯它，就像习惯身体的一部分。
-            </figcaption>
-        </figure>
-    </div>
 </body>
 </html>
