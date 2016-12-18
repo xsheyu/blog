@@ -9,7 +9,7 @@
                 $.ajax({
                     url:$.URL.user.login,
                     data:{
-                        username:$("#qwe") .val(),
+                        username:$("#username") .val(),
                         password:$("#password").val(),
                     },
                     type:"post",
@@ -17,7 +17,7 @@
                     success:function(return_data){
                         var code=return_data.code;
                         if(code!=1){
-                            alert("message");
+                            alert(return_data.message);
                         }else{
                             window.location.href="main.html";
                         }
@@ -35,6 +35,13 @@
         *{
             margin:0;
             padding:0;
+        }
+        body{
+            background: -webkit-linear-gradient( #16abff, #4fc5ff,#fff ); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient( #16abff, #4fc5ff,#fff ); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(#16abff, #4fc5ff,#fff ); /* Firefox 3.6 - 15 */
+            background: linear-gradient( #16abff, #4fc5ff,#fff ); /* 标准的语法 */
+            /*background-color: #32c4df;*/
         }
         #login{
             width:400px;
@@ -84,17 +91,17 @@
         }
     </style>
 </head>
-<body bgcolor="#32c4df">
+<body>
 <div id="login">
     <h2>登录</h2>
     <div class="item">
         <label>用户名：</label>
-        <input type="text" name="username" placeholder="请输入用户名" id="qwe">
+        <input type="text" name="username" placeholder="请输入用户名" id="username">
         <span id="user"></span>
     </div>
     <div class="item">
         <label>密码：</label>
-        <input type="password" name="pwd" placeholder="请输入密码">
+        <input type="password" name="pwd" placeholder="请输入密码" id="password">
     </div>
     <button class="loginBtn">登录</button>
     <a href="register.html">木有账号，去注册</a>
