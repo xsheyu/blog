@@ -1,30 +1,178 @@
-<html>
+<!DOCTYPE html>
+<html >
 <head>
     <meta charset="utf-8">
     <style type="text/css">
         *{
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("images/bg-yellow.png") top repeat ;
+            background-color: #59562a;
+        }
+        #topBar{
+            height: 40px;
+            width: 100%;
+            background-color: #413c23;
         }
         nav{
-            float:right;
-            margin-right:200px;
+            float: right;
+            margin-right: 200px;
+            padding-top: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+        #blog-tiltle{
+            height: 301px;
+            background: url("images/title-yellow.png")  no-repeat center top;
+            padding-top: 60px;
+            padding-left: 262px;
+        }
+        #blog-tiltle h2,h3{
+            color: #fff;
+            line-height: 30px;
+            padding: 4px;
+
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        #main{
+            width: 95%;
+            max-width: 1200px;
+            margin:0 auto;
+        }
+        #main .aside{
+            width: 20%;
+            background-color: #fff;
+        }
+        #main .aside img{
+            width: 180px;
+            height:180px;
+            text-align: center;
+
+        }
+        #main .content{
+            width: 78%;
+            margin: 5px;
+            background-color: #fff;
+        }
+        ul{
+            list-style: none;
+
+        }
+       li{
+           padding: 5px;
+           border-bottom: dotted 1px #000 ;
+           padding-bottom: 50px;
+           margin: 5px;
         }
     </style>
 </head>
-<body>
-    <div>
-        <header>
-            <div id="logo"></div>
-            <nav>
-                <span><a href="login.html">登录</a></span>
-                <span><a href="register.html">注册</a></span>
-                <span>搜索</span>
-            </nav>
+<body >
+    <div class="wrap">
+        <header >
+            <div id="topBar">
+                <div id="logo"></div>
+                <nav>
+                    <button><a href="login.html">登录</a></button>
+                    <button><a href="register.html">注册</a></button>
+                    <input type="text">
+                    <input type="button" value="搜索">
+                </nav>
+            </div>
+            <div id="blog-tiltle">
+                <h2>熊大的博客</h2>
+                <h3>一屋不扫何以扫天下</h3>
+            </div>
+            <div id="navigator"></div>
         </header>
-        <div>
-            <div class="aside"></div>
-            <div class="content"></div>
+        <div id="main">
+            <div class="aside left" >
+                <h4>个人资料</h4>
+                <img src="images/t03.jpg">
+            </div>
+            <div class="content left">
+                <ul>
+                    <li>
+                    <h3>web开发成长之路</h3>
+                    <p>web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发......</p>
+                    <div class="right">
+                        <span>2016-12-20</span>
+                        <span>阅读(15)</span>
+                        <span>评论(0)</span>
+                    </div>
+                    </li>
+                    <li>
+                        <h3>web开发成长之路</h3>
+                        <p>web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发......</p>
+                        <div class="right">
+                            <span>2016-12-20</span>
+                            <span>阅读(15)</span>
+                            <span>评论(0)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>web开发成长之路</h3>
+                        <p>web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发......</p>
+                        <div class="right">
+                            <span>2016-12-20</span>
+                            <span>阅读(15)</span>
+                            <span>评论(0)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>web开发成长之路</h3>
+                        <p>web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发......</p>
+                        <div class="right">
+                            <span>2016-12-20</span>
+                            <span>阅读(15)</span>
+                            <span>评论(0)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>web开发成长之路</h3>
+                        <p>web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发......</p>
+                        <div class="right">
+                            <span>2016-12-20</span>
+                            <span>阅读(15)</span>
+                            <span>评论(0)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>web开发成长之路</h3>
+                        <p>web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发......</p>
+                        <div class="right">
+                            <span>2016-12-20</span>
+                            <span>阅读(15)</span>
+                            <span>评论(0)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>web开发成长之路</h3>
+                        <p>web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发......</p>
+                        <div class="right">
+                            <span>2016-12-20</span>
+                            <span>阅读(15)</span>
+                            <span>评论(0)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>web开发成长之路</h3>
+                        <p>web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发......</p>
+                        <div class="right">
+                            <span>2016-12-20</span>
+                            <span>阅读(15)</span>
+                            <span>评论(0)</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
