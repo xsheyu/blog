@@ -48,17 +48,33 @@
             margin:0 auto;
         }
         #main .aside{
-            width: 20%;
+            width:28%;
+            margin: 5px;
             background-color: #fff;
         }
         #main .aside img{
             width: 180px;
             height:180px;
-            text-align: center;
+            display: block;
+            margin: 10px auto;
+
+        }
+        #main .aside .contact a{
+            display: block;
+            background: no-repeat;
+            width: 100%;
+            height: 27px;
+        }
+        #main .aside .contact .attent{
+            background-image: url("images/btn_attent.gif");
+
+        }
+        #main .aside .contact .letter{
+            background-image: url("images/btn_sendletter.gif");
 
         }
         #main .content{
-            width: 78%;
+            width: 70%;
             margin: 5px;
             background-color: #fff;
         }
@@ -96,6 +112,11 @@
             <div class="aside left" >
                 <h4>个人资料</h4>
                 <img src="images/t03.jpg">
+                <h4 style="text-align: center">熊大</h4>
+                <div class="contact">
+                    <a class="attent" name="加关注"></a>
+                    <a class="letter" name="发私信"></a>
+                </div>
             </div>
             <div class="content left">
                 <ul>
