@@ -42,8 +42,9 @@ aside .clear {
     text-align: left;
 }
 .content .data_left{
-    width: 40px;
+    width: 60px;
     height: 20px;
+    display: inline-block;
 }
 .content .data_middle{
     margin-left: 25px;
