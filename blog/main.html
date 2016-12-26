@@ -2,18 +2,29 @@
 <html >
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
         *{
             margin: 0;
             padding: 0;
         }
         body{
+            /*max-width: 1200px;*/
+            /*margin: 5px auto;*/
             background: url("images/bg-yellow.png") top repeat ;
             background-color: #59562a;
         }
+        .wrap{
+
+        }
+        /*header{*/
+            /*max-width: 1200px;*/
+            /*margin: 5px auto;*/
+        /*}*/
         #topBar{
             height: 40px;
             width: 100%;
+            margin: 0 auto;
             background-color: #413c23;
         }
         nav{
@@ -24,16 +35,9 @@
         a{
             text-decoration: none;
         }
-        #blog-tiltle{
-            height: 301px;
-            background: url("images/title-yellow.png")  no-repeat center top;
-            padding-top: 60px;
-            padding-left: 262px;
-        }
-        #blog-tiltle h2,h3{
-            color: #fff;
-            line-height: 30px;
-            padding: 4px;
+        .bg{
+            height:300px;
+           background: url("images/banner.jpg") no-repeat;
 
         }
         .left{
@@ -53,20 +57,25 @@
             background-color: #fff;
         }
         #main .aside img{
-            width: 180px;
-            height:180px;
+            max-width: 100%;
+            height:auto;
             display: block;
             margin: 10px auto;
 
         }
-        #main .aside .contact a{
-            display: block;
-            background: no-repeat;
-            width: 100%;
-            height: 27px;
+        #main .aside .contact {
+            width: 130px;
+            height: 40px;
+        }
+
+        #main .aside .contact .attent,.letter{
+            width: 60px;
+            height: 40px;
+
         }
         #main .aside .contact .attent{
             background-image: url("images/btn_attent.gif");
+
 
         }
         #main .aside .contact .letter{
@@ -102,20 +111,17 @@
                     <input type="button" value="搜索">
                 </nav>
             </div>
-            <div id="blog-tiltle">
-                <h2>熊大的博客</h2>
-                <h3>一屋不扫何以扫天下</h3>
-            </div>
+            <div class="bg"></div>
             <div id="navigator"></div>
         </header>
         <div id="main">
             <div class="aside left" >
-                <h4>个人资料</h4>
+                <h4 style="padding: 10px">个人资料</h4>
                 <img src="images/t03.jpg">
                 <h4 style="text-align: center">熊大</h4>
                 <div class="contact">
-                    <a class="attent" name="加关注"></a>
-                    <a class="letter" name="发私信"></a>
+                    <a class="attent" name="加关注" href="#"></a>
+                    <a class="letter" name="发私信" href="#"></a>
                 </div>
             </div>
             <div class="content left">
@@ -124,7 +130,7 @@
                     <h3>web开发成长之路</h3>
                     <p>web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发web开发......</p>
                     <div class="right">
-                        <span>2016-12-20</span>
+                        <time>2016-12-20</time>
                         <span>阅读(15)</span>
                         <span>评论(0)</span>
                     </div>
