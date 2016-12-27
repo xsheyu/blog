@@ -1,22 +1,101 @@
 /**
  * Created by 鱼鱼 on 2016/12/26.
  */
+// 原生js
 // window.onload=function  () {
 //     var aside_basic=document.getElementById("aside_basic");
 //     var aside_detail=document.getElementById("aside_detail");
 //     var basic1=document.getElementById("basic");
 //     var detail1=document.getElementById("detail");
-//     basic.onclick=function () {
-//         basic1.setid("")
+//     aside_basic.onclick=function () {
+//        basic1.style="";
+//         detail1.style="display:none";
+//     }
+//     aside_detail.onclick=function () {
+//         basic1.style="display:none";
+//         detail1.style="";
 //     }
 // };
-jQuery(function () {
-    jQuery("#aside_basic").click(function () {
-        jQuery("#basic").show();
-        jQuery("#detail").hide();
+/**资料切换
+ * **/
+$(function () {
+    $("#aside_basic").click(function () {
+        $("#basic").show();
+        $("#detail").hide();
+        $("#aside_basic").animate({fontSize:"1.5em"});
+        $("#aside_detail").animate({fontSize:"1em"});
+
     });
-    jQuery("#aside_detail").click(function () {
+    $("#aside_detail").click(function () {
         $("#basic").hide();
         $("#detail").show();
+        $("#aside_detail").animate({fontSize:"1.5em"});
+        $("#aside_basic").animate({fontSize:"1em"});
     });
-})
+    $("img").hover(function () {
+        $(".upload").show();
+    },function () {
+        $(".upload").hide();
+    });
+});
+ // 上传图片
+$(function () {
+    $("img").hover(function () {
+        $(".upload").show();
+    },function () {
+        $(".upload").hide();
+    });
+});
+
+
+
+
+var image = '';
+function selectImage(file){
+    if(!file.files || !file.files[0]){
+        return;
+    }
+    var reader = new FileReader();
+    reader.onload = function(evt){
+        document.getElementById('image').src = evt.target.result;
+        image = evt.target.result;
+    }
+    reader.readAsDataURL(file.files[0]);
+}
+function uploadImage(){
+
+    $.ajax({
+
+        type:'POST',
+
+        url: 'ajax/uploadimage',
+
+        data: {image: image},
+
+        async: false,
+
+        dataType: 'json',
+
+        success: function(data){
+
+            if(data.success){
+
+                alert('上传成功');
+
+            }else{
+
+                alert('上传失败');
+
+            }
+
+        },
+
+        error: function(err){
+
+            alert('网络故障');
+
+        }
+
+    });
+
+}

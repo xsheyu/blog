@@ -16,15 +16,27 @@ header{
 }
 aside{
     width: 25%;
+    /*height:500px;*/
     /*margin: 20px;*/
     background-color: aquamarine;
 }
 aside .icon{
-    max-width: 200px;
-    height: auto;
+    width: 200px;
+    height: 200px;
     margin: 10px auto;
-    border-radius: 100px;
-
+    position: relative;
+    background: #fff;
+}
+aside img{
+    width: 200px;
+    height: 200px;
+    /*border-radius: 100px;*/
+}
+aside .upload{
+    position: absolute;
+    top:150px;
+    left:50px;
+    background-color: #000;
 }
 /*aside .clear{  padding-top: 10px;  }*/
 aside .clear {
@@ -49,11 +61,8 @@ aside .clear {
 .content .data_middle{
     margin-left: 25px;
 }
-.list{
+.list {
     width: 25%;
     background-color: #16abff;
     height: 300px;
-}
-#hide{
-    display: none;
 }
