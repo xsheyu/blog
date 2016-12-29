@@ -10,83 +10,93 @@
     <script src="js/me.js"></script>
 </head>
 <body>
-<div class="wrap">
-    <!--顶部-->
-    <header>
-    </header>
-    <!--中间内容-->
-    <div class="main">
-        <!--侧边栏-->
-        <aside class="left">
-            <div class="icon">
-                <img src="images/icon.jpg" >
-               <p class="upload" style="display: none" onclick="uploadImage()">上传图片</p>
+
+<!--顶部-->
+
+<header>
+    <div class="wrap">
+        <ul class="right">
+            <li><a href="main.html" class="nav click_a">首页</a></li>
+            <li><a href="register.html" class="nav">技术分享</a></li>
+            <li><a class="nav">心情随记</a></li>
+            <li><a class="nav">留言板</a></li>
+            <li><a class="nav">个人资料</a></li>
+        </ul>
+    </div>
+</header>
+<!--中间内容-->
+<div class="main">
+    <!--侧边栏-->
+    <aside class="left">
+        <div class="icon">
+            <img src="images/icon.jpg">
+            <p class="upload" style="display: none" onclick="uploadImage()">上传图片</p>
+        </div>
+        <div class="clear">
+            <a id="aside_basic">基本资料</a><br/>
+            <a id="aside_detail">详细资料</a>
+        </div>
+    </aside>
+    <div class="content left">
+        <div id="basic">
+            <div>
+                <label class="data_left">昵称:</label>
+                <label class="data_middle">aaaa</label>
+                <label class="right"><a>编辑</a></label>
             </div>
-            <div class="clear">
-                <label id="aside_basic">基本资料</label><br/>
-                <label id="aside_detail">详细资料</label>
+            <div>
+                <label class="data_left">密码:</label>
+                <label class="data_middle">*****</label>
+                <label class="right"><a>编辑</a></label>
             </div>
-        </aside>
-        <div class="content left">
-            <div id="basic">
-                <div>
-                    <label class="data_left">昵称:</label>
-                    <label class="data_middle">aaaa</label>
-                    <label class="right"><a>编辑</a></label>
-                </div>
-                <div>
-                    <label class="data_left">密码:</label>
-                    <label class="data_middle">*****</label>
-                    <label class="right"><a>编辑</a></label>
-                </div>
-                <div>
-                    <label class="data_left">电话:</label>
-                    <label class="data_middle">188***7864</label>
-                    <label class="right"><a>编辑</a></label>
-                </div>
-                <div>
-                    <label class="data_left">email:</label>
-                    <label class="data_middle">xs**@**.com</label>
-                    <label class="right"><a>编辑</a></label>
-                </div>
+            <div>
+                <label class="data_left">电话:</label>
+                <label class="data_middle">188***7864</label>
+                <label class="right"><a>编辑</a></label>
             </div>
-            <div id="detail" style="display: none">
-                <div>
-                    <label class="data_left">性别:</label>
-                    <label class="data_middle">男</label>
-                    <label class="right"><a>编辑</a></label>
-                </div>
-                <div>
-                    <label class="data_left">身高:</label>
-                    <label class="data_middle">175</label>
-                    <label class="right"><a>编辑</a></label>
-                </div>
-                <div>
-                    <label class="data_left">体重:</label>
-                    <label class="data_middle">60</label>
-                    <label class="right"><a>编辑</a></label>
-                </div>
-                <div>
-                    <label class="data_left">毕业院校:</label>
-                    <label class="data_middle">太原理工</label>
-                    <label class="right"><a>编辑</a></label>
-                </div>
-                <div>
-                    <label class="data_left">生日:</label>
-                    <label class="data_middle">1994.01.10</label>
-                    <label class="right"><a>编辑</a></label>
-                </div>
+            <div>
+                <label class="data_left">email:</label>
+                <label class="data_middle">xs**@**.com</label>
+                <label class="right"><a>编辑</a></label>
             </div>
         </div>
-        <!--右边内容-->
-        <div class="list right">
-
+        <div id="detail" style="display: none">
+            <div>
+                <label class="data_left">性别:</label>
+                <label class="data_middle">男</label>
+                <label class="right"><a>编辑</a></label>
+            </div>
+            <div>
+                <label class="data_left">身高:</label>
+                <label class="data_middle">175</label>
+                <label class="right"><a>编辑</a></label>
+            </div>
+            <div>
+                <label class="data_left">体重:</label>
+                <label class="data_middle">60</label>
+                <label class="right"><a>编辑</a></label>
+            </div>
+            <div>
+                <label class="data_left">毕业院校:</label>
+                <label class="data_middle">太原理工</label>
+                <label class="right"><a>编辑</a></label>
+            </div>
+            <div>
+                <label class="data_left">生日:</label>
+                <label class="data_middle">1994.01.10</label>
+                <label class="right"><a>编辑</a></label>
+            </div>
         </div>
     </div>
-    <!--底部内容-->
-    <footer>
+    <!--右边内容-->
+    <div class="list right">
 
-    </footer>
+    </div>
 </div>
+<!--底部内容-->
+<footer>
+
+</footer>
+
 </body>
 </html>

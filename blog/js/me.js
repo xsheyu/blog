@@ -1,7 +1,15 @@
 /**
  * Created by 鱼鱼 on 2016/12/26.
  */
-// 原生js
+//导航菜单切换
+$(function(){
+    $("a .nav").click(function () {
+        $("a .nav").removeClass("click_a");
+        $(this).addClass("click_a");
+    });
+});
+
+// 资料切换原生js
 // window.onload=function  () {
 //     var aside_basic=document.getElementById("aside_basic");
 //     var aside_detail=document.getElementById("aside_detail");
@@ -22,20 +30,15 @@ $(function () {
     $("#aside_basic").click(function () {
         $("#basic").show();
         $("#detail").hide();
-        $("#aside_basic").animate({fontSize:"1.5em"});
-        $("#aside_detail").animate({fontSize:"1em"});
+        // $("#aside_basic").animate({fontSize:"1.5em"});
+        // $("#aside_detail").animate({fontSize:"1em"});
 
     });
     $("#aside_detail").click(function () {
         $("#basic").hide();
         $("#detail").show();
-        $("#aside_detail").animate({fontSize:"1.5em"});
-        $("#aside_basic").animate({fontSize:"1em"});
-    });
-    $("img").hover(function () {
-        $(".upload").show();
-    },function () {
-        $(".upload").hide();
+        // $("#aside_detail").animate({fontSize:"1.5em"});
+        // $("#aside_basic").animate({fontSize:"1em"});
     });
 });
  // 上传图片
