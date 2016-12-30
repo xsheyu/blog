@@ -26,10 +26,13 @@ li a{
     color: #222015;
 }
 li a:hover{
-    color: #7cffcf;
+    color: #fff;
     text-decoration: none;
 }
-
+.click_a {
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
 .main{
     width: 1200px;
     height: 1200px;
@@ -59,8 +62,8 @@ aside img{
     border-radius: 10px;
 }
 aside .upload{
+    display: block;
     width: 200px;
-    height: 30px;
     position: absolute;
     top:170px;
     text-align: center;

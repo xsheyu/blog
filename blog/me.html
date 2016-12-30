@@ -16,11 +16,11 @@
 <header>
     <div class="wrap">
         <ul class="right">
-            <li><a href="main.html" class="nav click_a">首页</a></li>
-            <li><a href="register.html" class="nav">技术分享</a></li>
+            <li><a class="nav" href="#" >首页</a></li>
+            <li><a class="nav" href="#" >技术分享</a></li>
             <li><a class="nav">心情随记</a></li>
             <li><a class="nav">留言板</a></li>
-            <li><a class="nav">个人资料</a></li>
+            <li><a class="nav">个人中心</a></li>
         </ul>
     </div>
 </header>
@@ -30,7 +30,8 @@
     <aside class="left">
         <div class="icon">
             <img src="images/icon.jpg">
-            <p class="upload" style="display: none" onclick="uploadImage()">上传图片</p>
+            <a class="upload" style="display: none">上传图片</a>
+            <input type="file" name="select" style="display: none" class="select">
         </div>
         <div class="clear">
             <a id="aside_basic">基本资料</a><br/>

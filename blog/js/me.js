@@ -3,9 +3,9 @@
  */
 //导航菜单切换
 $(function(){
-    $("a .nav").click(function () {
-        $("a .nav").removeClass("click_a");
-        $(this).addClass("click_a");
+    $(".nav").click(function () {
+        $(" .nav ").removeClass(" click_a");
+        $(this).addClass(" click_a");
     });
 });
 
@@ -47,6 +47,9 @@ $(function () {
         $(".upload").show();
     },function () {
         $(".upload").hide();
+    });
+    $(".upload").click(function () {
+        $(".select").click();
     });
 });
 
