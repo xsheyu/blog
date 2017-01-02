@@ -28,22 +28,23 @@ $(function(){
  * **/
 $(function () {
     $("#aside_basic").click(function () {
-        $("#basic").show();
+        $(".basic").show();
         $("#detail").hide();
-        // $("#aside_basic").animate({fontSize:"1.5em"});
-        // $("#aside_detail").animate({fontSize:"1em"});
-
     });
+    // $(".edit").click(function () {
+    //     $(".basic").hide();
+    //     $(".basic_edit").show();
+    // });
     $("#aside_detail").click(function () {
         $("#basic").hide();
-        $("#detail").show();
+        $(".detail").show();
         // $("#aside_detail").animate({fontSize:"1.5em"});
         // $("#aside_basic").animate({fontSize:"1em"});
     });
 });
  // 上传图片
 $(function () {
-    $("img").hover(function () {
+    $(".icon").hover(function () {
         $(".upload").show();
     },function () {
         $(".upload").hide();
@@ -69,39 +70,35 @@ function selectImage(file){
     reader.readAsDataURL(file.files[0]);
 }
 function uploadImage(){
-
     $.ajax({
-
         type:'POST',
-
         url: 'ajax/uploadimage',
-
         data: {image: image},
-
         async: false,
-
         dataType: 'json',
-
         success: function(data){
-
             if(data.success){
-
                 alert('上传成功');
-
             }else{
-
                 alert('上传失败');
-
             }
-
         },
-
         error: function(err){
-
             alert('网络故障');
-
         }
-
     });
-
 }
+//编辑基本资料和详细资料
+$(function () {
+    $(".edit").click(function () {
+
+        $("#detail").hide();
+        $(".basic").hide();
+        $(".basic_edit").show();
+    });
+    $(".editBtn").click(function () {
+        $(".detail").hide();
+        $("#basic").hide();
+        $(".detail_edit").show();
+    });
+});

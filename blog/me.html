@@ -15,9 +15,9 @@
 
 <header>
     <div class="wrap">
-        <ul class="right">
-            <li><a class="nav" href="#" >首页</a></li>
-            <li><a class="nav" href="#" >技术分享</a></li>
+        <ul class="left">
+            <li><a class="nav" href="#">首页</a></li>
+            <li><a class="nav" href="#">技术分享</a></li>
             <li><a class="nav">心情随记</a></li>
             <li><a class="nav">留言板</a></li>
             <li><a class="nav">个人中心</a></li>
@@ -30,8 +30,8 @@
     <aside class="left">
         <div class="icon">
             <img src="images/icon.jpg">
-            <a class="upload" style="display: none">上传图片</a>
-            <input type="file" name="select" style="display: none" class="select">
+            <p class="upload hidden">上传图片</p>
+            <input type="file" name="select"  class="select hidden">
         </div>
         <div class="clear">
             <a id="aside_basic">基本资料</a><br/>
@@ -40,52 +40,117 @@
     </aside>
     <div class="content left">
         <div id="basic">
-            <div>
-                <label class="data_left">昵称:</label>
-                <label class="data_middle">aaaa</label>
-                <label class="right"><a>编辑</a></label>
+            <div class="basic">
+                <button class="edit right">编辑</button>
+                <div>
+                    <label class="data_left">昵称:</label>
+                    <label class="data_right">aaaa</label>
+                </div>
+                <div>
+                    <label class="data_left">密码:</label>
+                    <label class="data_right">*****</label>
+                </div>
+                <div>
+                    <label class="data_left">电话:</label>
+                    <label class="data_right">188***7864</label>
+                </div>
+                <div>
+                    <label class="data_left">email:</label>
+                    <label class="data_right">xs**@**.com</label>
+                </div>
             </div>
-            <div>
-                <label class="data_left">密码:</label>
-                <label class="data_middle">*****</label>
-                <label class="right"><a>编辑</a></label>
-            </div>
-            <div>
-                <label class="data_left">电话:</label>
-                <label class="data_middle">188***7864</label>
-                <label class="right"><a>编辑</a></label>
-            </div>
-            <div>
-                <label class="data_left">email:</label>
-                <label class="data_middle">xs**@**.com</label>
-                <label class="right"><a>编辑</a></label>
+            <div class="basic_edit hidden">
+                <button class="basic_save right">保存</button>
+                <button class="basic_back right">返回</button>
+                <div>
+                    <label class="data_left">昵称:</label>
+                    <input class="data_right"/>
+                </div>
+                <div>
+                    <label class="data_left">密码:</label>
+                    <input class="data_right"/>
+                </div>
+                <div>
+                    <label class="data_left">电话:</label>
+                    <input class="data_right"/>
+                </div>
+                <div>
+                    <label class="data_left">email:</label>
+                    <input class="data_right"/>
+                </div>
             </div>
         </div>
-        <div id="detail" style="display: none">
-            <div>
-                <label class="data_left">性别:</label>
-                <label class="data_middle">男</label>
-                <label class="right"><a>编辑</a></label>
+        <div id="detail">
+            <div class="detail">
+                <button class="editBtn right">编辑</button>
+                <div>
+                    <label class="data_left">性别:</label>
+                    <label class="data_right">男</label>
+                </div>
+                <div>
+                    <label class="data_left">生日:</label>
+                    <label class="data_right">1994.01.10</label>
+                </div>
+                <div>
+                    <label class="data_left">身高:</label>
+                    <label class="data_right">175</label>
+                </div>
+                <div>
+                    <label class="data_left">体重:</label>
+                    <label class="data_right">60</label>
+                </div>
+                <div>
+                    <label class="data_left">毕业院校:</label>
+                    <label class="data_right">太原理工</label>
+                </div>
+                <div>
+                    <label class="data_left">职位:</label>
+                    <label class="data_right">java工程师</label>
+                </div>
+                <div>
+                    <label class="data_left">公司:</label>
+                    <label class="data_right">XXXX公司</label>
+                </div>
+                <div>
+                    <label class="data_left">所在地:</label>
+                    <label class="data_right">北京朝阳</label>
+                </div>
             </div>
-            <div>
-                <label class="data_left">身高:</label>
-                <label class="data_middle">175</label>
-                <label class="right"><a>编辑</a></label>
-            </div>
-            <div>
-                <label class="data_left">体重:</label>
-                <label class="data_middle">60</label>
-                <label class="right"><a>编辑</a></label>
-            </div>
-            <div>
-                <label class="data_left">毕业院校:</label>
-                <label class="data_middle">太原理工</label>
-                <label class="right"><a>编辑</a></label>
-            </div>
-            <div>
-                <label class="data_left">生日:</label>
-                <label class="data_middle">1994.01.10</label>
-                <label class="right"><a>编辑</a></label>
+            <div class="detail_edit hidden">
+                <button class="detail_save right">保存</button>
+                <button class="detail_back right">返回</button>
+                <div>
+                    <label class="data_left">性别:</label>
+                    <label class="data_right">男</label>
+                </div>
+                <div>
+                    <label class="data_left">生日:</label>
+                    <label class="data_right">1994.01.10</label>
+                </div>
+                <div>
+                    <label class="data_left">身高:</label>
+                    <label class="data_right">175</label>
+                </div>
+                <div>
+                    <label class="data_left">体重:</label>
+                    <label class="data_right">60</label>
+                </div>
+                <div>
+                    <label class="data_left">毕业院校:</label>
+                    <label class="data_right">太原理工</label>
+                </div>
+                <div>
+                    <label class="data_left">职位:</label>
+                    <label class="data_right">java律师</label>
+                </div>
+                <div>
+                    <label class="data_left">公司:</label>
+                    <label class="data_right">XXXX公司</label>
+                </div>
+                <div>
+                    <label class="data_left">所在地:</label>
+                    <label class="data_right">北京朝阳</label>
+                </div>
             </div>
         </div>
     </div>

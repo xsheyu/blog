@@ -3,7 +3,8 @@ body{
 }
 header{
     width: 100%;
-    height: 180px;
+    height: 150px;
+    padding-top: 30px;
     /*background-color: #fbffed;*/
    background: url("../images/banner_top.jpg") no-repeat;
 }
@@ -62,8 +63,11 @@ aside img{
     border-radius: 10px;
 }
 aside .upload{
-    display: block;
+    height: 30px;
     width: 200px;
+    line-height: 30px;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
     position: absolute;
     top:170px;
     text-align: center;
@@ -71,7 +75,6 @@ aside .upload{
     color: #fff;
     border: none;
 }
-/*aside .clear{  padding-top: 10px;  }*/
 aside .clear {
     font-size: 18px;
     line-height: 50px;
@@ -81,7 +84,6 @@ aside .clear {
     width: 50%;
     height: 100%;
     margin-left: 10px;
-    /*background-color: #4fc5ff;*/
     line-height: 50px;
     border-right: 1px solid #ddd;
 }
@@ -94,12 +96,11 @@ aside .clear {
     height: 20px;
     display: inline-block;
 }
-.content .data_middle{
+.content .data_right{
     margin-left: 25px;
 }
 .list {
     width: 25%;
     margin-left: 10px;
-    /*background-color: #16abff;*/
     height: 300px;
 }
