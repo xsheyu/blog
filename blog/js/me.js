@@ -88,6 +88,31 @@ function uploadImage(){
         }
     });
 }
+var nickname ;
+var email;
+var phone_num;
+$(function () {
+    $.ajax({
+        url:"http://192.168.0.199/blog/userMain/getUserMainById/",
+        data:{
+            main_id:1
+        },
+        type: "get",
+        dataType:"json",
+        success:function (return_data) {
+            if (return_data.code != 1) {
+                alert(return_data.message);
+                return;
+            }
+            nickname = return_data.data.nickname;
+            email = return_data.data.email;
+            phone_num = return_data.data.phone_number;
+            $("#lab_nickname").text(nickname);
+            $("#lab_email").text(email);
+            $("#lab_phone").text(phone_num);
+        }
+    });
+})
 //编辑基本资料和详细资料
 $(function () {
     $(".edit").click(function () {
