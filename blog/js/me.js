@@ -28,7 +28,7 @@ $(function(){
  * **/
 $(function () {
     $("#aside_basic").click(function () {
-        $(".basic").show();
+        $("#basic").show();
         $("#detail").hide();
     });
     // $(".edit").click(function () {
@@ -37,7 +37,7 @@ $(function () {
     // });
     $("#aside_detail").click(function () {
         $("#basic").hide();
-        $(".detail").show();
+        $("#detail").show();
         // $("#aside_detail").animate({fontSize:"1.5em"});
         // $("#aside_basic").animate({fontSize:"1em"});
     });
@@ -91,10 +91,20 @@ function uploadImage(){
 //编辑基本资料和详细资料
 $(function () {
     $(".edit").click(function () {
-
         $("#detail").hide();
         $(".basic").hide();
         $(".basic_edit").show();
+    });
+    $(".basic_back").click(function () {
+        if(confirm("确定要离开吗")){
+            $(".basic").show();
+            $(".basic_edit").hide();
+        }else{
+            $(".basic_edit").reload();
+        }
+    });
+    $(".basic_save").click(function () {
+
     });
     $(".editBtn").click(function () {
         $(".detail").hide();
