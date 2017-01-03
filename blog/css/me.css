@@ -91,6 +91,9 @@ aside .clear {
     padding: 40px;
     text-align: left;
 }
+.content button{
+    margin: 5px;
+}
 .content .data_left{
     width: 60px;
     height: 20px;
