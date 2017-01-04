@@ -112,14 +112,18 @@ $(function () {
             $("#lab_phone").text(phone_num);
         }
     });
-})
-//编辑基本资料和详细资料
-$(function () {
     $(".edit").click(function () {
         $("#detail").hide();
         $(".basic").hide();
         $(".basic_edit").show();
+        $("#input_nickname").text($("#lab_nickname"));
+        $("#input_phone").text($("#lab_phone"));
+        $("#input_email").text($("#lab_email"));
     });
+});
+//编辑基本资料和详细资料
+$(function () {
+
     $(".basic_back").click(function () {
         if(confirm("确定要离开吗")){
             $(".basic").show();
@@ -132,8 +136,8 @@ $(function () {
 
     });
     $(".editBtn").click(function () {
-        $(".detail").hide();
         $("#basic").hide();
+        $(".detail").hide();
         $(".detail_edit").show();
     });
 });

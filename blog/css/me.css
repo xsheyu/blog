@@ -27,12 +27,12 @@ li a{
     color: #222015;
 }
 li a:hover{
-    color: #fff;
+    color: #71b5ff;
     text-decoration: none;
 }
 .click_a {
-    border-bottom: 2px solid #fff;
-    color: #fff;
+    border-bottom: 2px solid #71b5ff;
+    color: #71b5ff;
 }
 .main{
     width: 1200px;
@@ -91,8 +91,16 @@ aside .clear {
     padding: 40px;
     text-align: left;
 }
+.content .div{
+    margin-top: 10px;
+}
 .content button{
-    margin: 5px;
+    margin: 8px;
+    width: 60px;
+    height: 25px;
+    background-color: #47cfff;
+    border: none;
+    border-radius: 10px;
 }
 .content .data_left{
     width: 60px;
@@ -100,7 +108,21 @@ aside .clear {
     display: inline-block;
 }
 .content .data_right{
-    margin-left: 25px;
+    margin-left: 10px;
+}
+.content .input_right{
+    margin-left: 10px;
+    width: 200px;
+    height: 28px;
+    line-height: 28px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid rgba(170, 188, 193, 0.53);
+    text-indent: 1em;
+}
+.content .sex{
+    margin-left: 10px;
+    /*width: 80px;*/
 }
 .list {
     width: 25%;
