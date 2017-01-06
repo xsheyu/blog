@@ -98,18 +98,19 @@ aside .clear {
     margin: 8px;
     width: 60px;
     height: 25px;
+    line-height: 25px;
     background-color: #47cfff;
     border: none;
     border-radius: 10px;
 }
 .content .data_left{
-    width: 60px;
+    width: 100px;
     height: 20px;
     display: inline-block;
 }
-.content .data_right{
-    margin-left: 10px;
-}
+/*.content .data_right{*/
+    /*margin-left: 10px;*/
+/*}*/
 .content .input_right{
     margin-left: 10px;
     width: 200px;

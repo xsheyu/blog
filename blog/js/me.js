@@ -29,15 +29,15 @@ $(function(){
 $(function () {
     $("#aside_basic").click(function () {
         $("#basic").show();
+        $(".basic").show();
+        $(".basic_edit").hide();
         $("#detail").hide();
     });
-    // $(".edit").click(function () {
-    //     $(".basic").hide();
-    //     $(".basic_edit").show();
-    // });
     $("#aside_detail").click(function () {
         $("#basic").hide();
         $("#detail").show();
+        $(".detail").show();
+        $(".detail_edit").hide();
         // $("#aside_detail").animate({fontSize:"1.5em"});
         // $("#aside_basic").animate({fontSize:"1em"});
     });
@@ -123,7 +123,6 @@ $(function () {
 });
 //编辑基本资料和详细资料
 $(function () {
-
     $(".basic_back").click(function () {
         if(confirm("确定要离开吗")){
             $(".basic").show();
@@ -139,5 +138,13 @@ $(function () {
         $("#basic").hide();
         $(".detail").hide();
         $(".detail_edit").show();
+        });
+    $("#birthday").click(function (e) {
+        var ths = this;
+        calendar.show({
+            id: this, ok: function () {
+                alert(ths.value);
+            }
+        });
     });
-});
+    });
