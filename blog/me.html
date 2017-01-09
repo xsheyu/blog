@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人中心</title>
     <link href="css/common.css" rel="stylesheet">
+    <link href="css/common2.css" rel="stylesheet">
     <link href="css/me.css" rel="stylesheet">
     <link href="css/hDate.css" rel="stylesheet">
+    <link href="css/select2.css" rel="stylesheet">
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/hDate.js"></script>
+    <script src="js/area.js"></script>
+    <script src="js/location.js"></script>
+    <script src="js/select2.js"></script>
     <script src="js/me.js"></script>
 </head>
 <body>
@@ -160,7 +165,11 @@
                     </div>
                     <div>
                         <label class="data_left">所在地:</label>
-                        <input class="input_right" type="text">
+                        <select id="loc_province" style="width:120px;"></select>
+
+                        <select id="loc_city" style="width:120px; margin-left: 10px"></select>
+
+                        <select id="loc_town" style="width:120px;margin-left: 10px"></select>
                     </div>
                 </div>
             </div>
