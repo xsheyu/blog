@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人中心</title>
     <link href="css/common.css" rel="stylesheet">
-    <link href="css/common2.css" rel="stylesheet">
+    <link href="tool/location/location.css" rel="stylesheet">
     <link href="css/me.css" rel="stylesheet">
-    <link href="css/hDate.css" rel="stylesheet">
-    <link href="css/select2.css" rel="stylesheet">
+    <link href="tool/date/need/laydate.css" rel="stylesheet">
+    <link href="tool/location/select2.css" rel="stylesheet">
+    <script src="tool/date/laydate.js"></script>
     <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/hDate.js"></script>
-    <script src="js/area.js"></script>
-    <script src="js/location.js"></script>
-    <script src="js/select2.js"></script>
+    <script src="tool/location/area.js"></script>
+    <script src="tool/location/location.js"></script>
+    <script src="tool/location/select2.js"></script>
     <script src="js/me.js"></script>
 </head>
 <body>
@@ -141,7 +141,7 @@
                     </div>
                     <div>
                         <label class="data_left">生日:</label>
-                        <input class="input_right" id="birthday" type="text">
+                        <input class="input_right laydate-icon" id="birthday" >
                     </div>
                     <div>
                         <label class="data_left">身高:</label>
@@ -184,6 +184,9 @@
 <footer>
 
 </footer>
-
+<script>
+    laydate.skin('molv');//切换皮肤，请查看skins下面皮肤库
+    laydate({elem: '#birthday'});//绑定元素
+</script>
 </body>
 </html>

@@ -1,8 +1,14 @@
 /**
  * Created by 鱼鱼 on 2016/12/26.
  */
-//导航菜单切换
+document.ready= function () {
+    // !function() {
+
+    // }();
+}
 $(function(){
+
+    //导航菜单切换
     $(".nav").click(function () {
         $(" .nav ").removeClass(" click_a");
         $(this).addClass(" click_a");
@@ -139,12 +145,12 @@ $(function () {
         $(".detail").hide();
         $(".detail_edit").show();
         });
-    $("#birthday").click(function (e) {
-        var ths = this;
-        calendar.show({
-            id: this, ok: function () {
-                alert(ths.value);
-            }
-        });
-    });
+    // $("#birthday").click(function (e) {
+    //     var ths = this;
+    //     calendar.show({
+    //         id: this, ok: function () {
+    //             alert(ths.value);
+    //         }
+    //     });
+    // });
     });
