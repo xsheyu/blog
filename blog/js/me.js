@@ -141,7 +141,29 @@ $(function () {
         }
     });
     $(".basic_save").click(function () {
-
+        $.ajax({
+            url:$.URL.user.updateUserBaseInfo,
+            data: {
+                id:1,
+                nickname: $("#input_nickname").val(),
+                password: $("#input_pwd").val(),
+                phone: $("#input_phone").val(),
+                email: $("#input_email").val()
+            },
+            type: "post",
+            dataType: "json",
+            success:function (return_data) {
+                if(return_data.code!=1){
+                    alert(return_data.message);
+                }else {
+                    alert("保存成功");
+                    location.reload(true);
+                }
+            },
+            error:function () {
+                alert("网络异常");
+            }
+        });
     });
     $(".editBtn").click(function () {
         $("#basic").hide();
