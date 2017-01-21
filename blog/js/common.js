@@ -28,7 +28,7 @@ $.URL = {
         regist : basePath + "/userMain/registUser/",
         login : basePath + "/userMain/login/",
         getUserMainById: basePath+"/userMain/getUserMainById/",
-        updateUserBaseInfo: basePath+"userMain/updateUserBaseInfo/"
+        updateUserBaseInfo: basePath+"/userMain/updateUserBaseInfo/"
 
 }
 }
