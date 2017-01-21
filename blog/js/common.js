@@ -26,6 +26,7 @@ $.URL = {
     user : {
         isLoginNameRepetition : basePath + "/userMain/isLoginNameRepetition/",
         regist : basePath + "/userMain/registUser/",
-        login : basePath + "/userMain/login/"
+        login : basePath + "/userMain/login/",
+        getUserMainById: basePath+"/userMain/getUserMainById/"
     }
 }

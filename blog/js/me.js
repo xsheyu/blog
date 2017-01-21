@@ -99,7 +99,7 @@ var email;
 var phone_num;
 $(function () {
     $.ajax({
-        url:"http://192.168.0.199/blog/userMain/getUserMainById/",
+        url: $.URL.user.getUserMainById,
         data:{
             main_id:1
         },
@@ -116,6 +116,9 @@ $(function () {
             $("#lab_nickname").text(nickname);
             $("#lab_email").text(email);
             $("#lab_phone").text(phone_num);
+            $("#input_nickname").val(nickname);
+            $("#input_phone").val(phone_num);
+            $("#input_email").val(email);
         }
     });
     $(".edit").click(function () {
